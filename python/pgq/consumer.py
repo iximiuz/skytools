@@ -53,7 +53,7 @@ class RetriableWalkerEvent(RetriableEvent):
         self._walker.tag_event_done(self)
 
     def get_status(self):
-        self._walker.get_status(self)
+        return self._walker.get_status(self)
 
     def tag_retry(self, retry_time = 60):
         self._walker.tag_event_retry(self, retry_time)
